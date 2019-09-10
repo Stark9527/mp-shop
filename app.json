@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/main/index/index",
+    "pages/main/cart/cart",
+    "pages/main/me/me",
+    "pages/main/login/login"
+  ],
+  "subpackages": [
+    {
+      "root": "pages/subpages",
+      "pages": [
+        "goods/goods"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

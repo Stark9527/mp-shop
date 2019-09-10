@@ -1,0 +1,66 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1378954 */
+  src: url('//at.alicdn.com/t/font_1378954_iwp8pszf1g.eot');
+  src: url('//at.alicdn.com/t/font_1378954_iwp8pszf1g.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1378954_iwp8pszf1g.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1378954_iwp8pszf1g.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1378954_iwp8pszf1g.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1378954_iwp8pszf1g.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconcart:before {
+  content: "\e6af";
+}
+
+.iconcart_active:before {
+  content: "\e6b9";
+}
+
+.iconme:before {
+  content: "\e78b";
+}
+
+.iconme_active:before {
+  content: "\e78c";
+}
+
+.iconiconfontjiantou6:before {
+  content: "\e636";
+}
+
+.iconfavor:before {
+  content: "\e7e1";
+}
+
+.iconorder_active:before {
+  content: "\e7e6";
+}
+
+.iconorder:before {
+  content: "\e7e7";
+}
+
+.iconfavor_active:before {
+  content: "\e7ec";
+}
+
+
