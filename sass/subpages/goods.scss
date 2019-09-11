@@ -1,3 +1,8 @@
+@import "../base/test";
+
 body {
-  font-size: 100px;
+  font-size: $globalFontSize;
+  background: red;
+  border: 1px solid red;
+  width: 100rpx;
 }
