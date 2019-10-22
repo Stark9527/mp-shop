@@ -37,24 +37,8 @@
 .ui-tj {
   text-align: justify; }
 
-.feature-list > .no-more {
-  display: block;
-  padding: 20rpx;
-  font-size: 14px;
-  color: #C0C4CC; }
-.feature-list > .loading {
-  padding: 20rpx;
-  font-size: 14px;
-  color: #C0C4CC; }
-@keyframes rotates {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-  .feature-list > .loading > .iconloading {
-    display: inline-block;
-    margin-right: 10rpx;
-    vertical-align: middle;
-    animation: rotates 1s linear infinite; }
-  .feature-list > .loading > .loading-text {
-    vertical-align: middle; }
+.discover {
+  display: inline-block;
+  margin-left: 10rpx; }
+  .discover > .iconfont {
+    display: inline-block; }

@@ -1,0 +1,26 @@
+<view class="video-player-box">
+  <video id="videoplayer"
+         class="video-player"
+         src="https://ccgw.oss-cn-shenzhen.aliyuncs.com/banner/47466a58a3b74ffca230b253edc1f0e1.mp4"
+         poster="http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/185217/1526554337758.jpg"
+         title="视频标题"
+         controls="{{true}}"
+         object-fit="contain"
+         enable-play-gesture="{{true}}"
+         bindplay="bindplay"
+         bindpause="bindpause"
+         bindended="bindended"
+         bindtimeupdate="bindtimeupdate"
+         bindfullscreenchange="bindfullscreenchange"
+         bindwaiting="bindwaiting"
+         binderror="binderror"
+         bindprogress="bindprogress"
+  >
+    <!--<cover-view class="controls">-->
+      <!--<cover-image class="cover"-->
+                   <!--src="http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/185217/1526554337758.jpg"-->
+                   <!--mode="aspectFill"-->
+      <!--&gt;</cover-image>-->
+    <!--</cover-view>-->
+  </video>
+</view>

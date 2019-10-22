@@ -1,0 +1,13 @@
+@import "../base/main";
+
+.discover {
+  display: inline-block;
+  margin-left: 10rpx;
+  > .iconfont {
+    display: inline-block;
+    //vertical-align: middle;
+  }
+  text {
+    //vertical-align: middle;
+  }
+}

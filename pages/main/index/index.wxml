@@ -1,0 +1,4 @@
+<view class="feature-list">
+  <listItem list="{{featureList}}" needClassify="true" data-color="red"></listItem>
+  <loading loaded="{{loaded}}" loading-text="没有更多了"></loading>
+</view>

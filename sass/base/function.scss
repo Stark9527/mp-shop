@@ -1,0 +1,13 @@
+@function colors($color) {
+  @if not map_has_key($globalColor, $color) {
+    @warn "No color found for '#{$color}' in $globalColor map. Property omitted."
+  }
+  @return map-get($globalColor,$color);
+}
+
+@function ftSize($fontType) {
+  @if not map_has_key($globalFontSize, $fontType) {
+    @warn "No fontName found for '#{$fontType}' in $globalFontSize map. Property omitted."
+  }
+  @return map-get($globalFontSize, $fontType)
+}

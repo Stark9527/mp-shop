@@ -1,0 +1,85 @@
+@import "../base/main";
+@import "../base/iconfont";
+
+.item {
+  box-sizing: border-box;
+  border-bottom: 10rpx solid colors('border');
+  padding: 10rpx 20rpx;
+
+  &:last-of-type {
+    //border-bottom: 0;
+  }
+
+  > .classify {
+    display: block;
+    font-size: ftSize('sub');
+    text-align: center;
+    color: colors('lower');
+  }
+
+  > .title {
+    display: block;
+    margin: 20rpx 0;
+    font-size: ftSize('title');
+    font-weight: bold;
+    color: colors('title');
+  }
+
+  > .author {
+    display: block;
+    margin-bottom: 10rpx;
+    font-size: ftSize('main');
+    color: colors('main');
+  }
+
+  > .cover-box {
+    position: relative;
+    text-align: center;
+
+    > .cover {
+      width: 100%;
+      height: 350rpx;
+    }
+    > .cover-audio {
+      width: 350rpx;
+      height: 350rpx;
+      border-radius: 50%;
+    }
+    > .iconfont {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 100rpx;
+      color: rgba(255, 255, 255, .9);
+    }
+  }
+
+  > .brief {
+    display: block;
+    margin-bottom: 30rpx;
+    font-size: ftSize('main');
+    color: colors('main');
+  }
+
+  > .date {
+    font-size: ftSize('sub');
+    color: colors('lower');
+  }
+
+  > .tool-box {
+    display: inline-block;
+    float: right;
+    > .iconfont {
+      display: inline-block;
+      font-size: 30rpx;
+    }
+    > .favor {
+      margin-right: 20rpx;
+    }
+
+    > .share {
+
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<view class="comment-container">
+  <view class="mask" bindtap="bindMaskTap"></view>
+  <view class="comment-box" style="bottom: {{offsetBottom}}px;">
+    <textarea
+      value="{{comment}}"
+      class="type-area"
+      name="comment"
+      placeholder="{{placeholder}}"
+      maxlength="{{countLimit}}"
+      fixed="{{fixed}}"
+      show-confirm-bar="{{false}}"
+      adjust-position="{{false}}"
+      bindfocus="bindfocus"
+      bindblur="bindblur"
+      bindinput="bindinput"
+      bindconfirm="bindconfirm"
+      placeholder-style="{{placeholderStyle}}"
+      focus="{{focus}}"
+      hold-keyboard="{{true}}"
+    ></textarea>
+    <view class="toolbar">
+      <text class="count-limit">{{count}}</text>
+      <view class="submit" bindtap="bindSubmitTap">{{submitText}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,5 @@
+<view wx:if="{{!loaded}}" class="ui-tc loading">
+  <text class="iconfont iconloading"></text>
+  <text class="loading-text">{{loadingText}}</text>
+</view>
+<text wx:if="{{loaded}}" class="ui-tc no-more">{{noMoreText}}</text>

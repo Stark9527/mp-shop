@@ -1,0 +1,114 @@
+@import "../base/main";
+@import "../base/iconfont";
+
+.audio-player-box {
+  position: relative;
+  width: 100%;
+  height: 358rpx;
+  overflow: hidden;
+  > .blur {
+    width: 100%;
+    height: inherit;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    filter: blur(10rpx);
+    transform: scale(1.2);
+  }
+
+  > .audio-player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200rpx;
+    height: 200rpx;
+    text-align: center;
+    box-shadow: 0 0 20rpx colors('white');
+    border-radius: 50%;
+    &.loading::before {
+      content: '';
+      position: absolute;
+      top: -4rpx;
+      left: -4rpx;
+      height: 100%;
+      width: 100%;
+      border: 4rpx solid transparent;
+      border-top: 4rpx solid colors('white');
+      border-right: 4rpx solid colors('white');
+      border-radius: 50%;
+      animation: loadingAnimation 1.5s linear infinite;
+    }
+    &.loading > .loading-dot {
+      position: absolute;
+      top: calc(50% - 4rpx);
+      left: 50%;
+      width: 50%;
+      height: 8rpx;
+      background: transparent;
+      transform-origin: left;
+      animation: dotAnimation 1.5s linear infinite;
+      &::before {
+        content: '';
+        position: absolute;
+        right: -10rpx;
+        top: -8rpx;
+        border-radius: 50%;
+        height: 20rpx;
+        width: 20rpx;
+        background: colors('white');
+        box-shadow: 0 0 20rpx colors('sub');
+      }
+    }
+    @keyframes loadingAnimation {
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes dotAnimation {
+      0%{
+        transform: rotate(45deg);
+      }
+      100%{
+        transform: rotate(405deg);
+      }
+    }
+    @keyframes coverAnimation {
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    > .cover {
+      box-sizing: border-box;
+      border-radius: 50%;
+      width: 200rpx;
+      height: 200rpx;
+      &.play {
+        animation: coverAnimation 3s linear infinite;
+      }
+    }
+    > .iconfont {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(255, 255, 255, .8);
+      font-size: 80rpx;
+    }
+    > .audio-info {
+      position: absolute;
+      top: calc(50% + 120rpx);
+      left: 50%;
+      width: 100vw;
+      transform: translate(-50%, 0);
+      color: colors('white');
+      font-size: ftSize('sub')
+    }
+  }
+}

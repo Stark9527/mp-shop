@@ -1,0 +1,30 @@
+.ui-fl {
+  float: left;
+}
+.ui-fr {
+  float: right;
+}
+
+.ui-clear {
+  @extend %clearfix;
+}
+
+.ui-overflow-clip {
+  @extend %overflowClip;
+}
+.ui-overflow-clip-two {
+  @extend %overflowClipTwo;
+}
+
+.ui-tl {
+  text-align: left;
+}
+.ui-tr {
+  text-align: right;
+}
+.ui-tc {
+  text-align: center;
+}
+.ui-tj {
+  text-align: justify;
+}

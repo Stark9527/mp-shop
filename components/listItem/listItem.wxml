@@ -1,0 +1,19 @@
+<view class="item" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="id" data-index="index" bindtap="bindItemTap">
+  <text wx:if="{{needClassify}}" class="classify">- {{item.classify}} -</text>
+  <text class="title">{{item.title}}</text>
+  <text class="author">{{item.author}}</text>
+  <view class="cover-box">
+    <image class="cover {{item.classify === '音乐' ? 'cover-audio' : ''}}"
+           src="{{item.imgSrc}}"
+           lazy-load="true"
+           mode="aspectFill"
+    ></image>
+    <text wx:if="{{item.classify === '视频' || item.classify === '音乐'}}" class="iconfont iconplay"></text>
+  </view>
+  <text class="brief">{{item.brief}}</text>
+  <text class="date">{{item.date}}</text>
+  <view class="tool-box">
+    <text wx:if="{{item.icon.favor}}" class="iconfont iconall favor"></text>
+    <text wx:if="{{item.icon.share}}" class="iconfont iconfavor share"></text>
+  </view>
+</view>

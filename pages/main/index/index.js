@@ -6,13 +6,36 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
-  },
-  //事件处理函数
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    loaded: false,
+    featureList: [
+      {
+        id: 0,
+        classify: '阅读',
+        title: '这里是一个标题',
+        author: '作者XXX',
+        imgSrc: 'http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/185217/1526554337758.jpg',
+        brief: '这里是文章简介',
+        date: '2019-10-14 11:59:11',
+        icon: {
+          favor: true,
+          share: true
+        }
+      },
+      {
+        id: 1,
+        classify: '音乐',
+        title: '这里是asjdflajdfl;标题',
+        author: '作者ssj',
+        imgSrc: 'http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/18512/1526554262156.jpg',
+        brief: '这里是另外一个文件的简介',
+        date: '2019-10-10 10:19:21',
+        icon: {
+          favor: false,
+          share: true
+        }
+      }
+    ]
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -41,6 +64,150 @@ Page({
         }
       })
     }
+  },
+  onShow: function () {
+    if (typeof this.getTabBar === 'function' &&
+      this.getTabBar()) {
+      console.log('设置选中项 0')
+      this.getTabBar().setData({
+        selected: 0
+      })
+    }
+  },
+  onReady() {
+
+  },
+  onHide() {
+
+  },
+  onUnload() {
+
+  },
+  onPullDownRefresh() {
+    setTimeout(() => {
+      let newList = [
+        {
+          id: Number((Math.random() * 10).toFixed(3)) * 1000,
+          classify: '阅读',
+          title: '这里是asjdflajdfl;标题',
+          author: '作者ssj',
+          imgSrc: 'http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/18512/1526554262156.jpg',
+          brief: '这里是另外一个文件的简介',
+          date: '2019-10-10 10:19:21',
+          icon: {
+            favor: false,
+            share: true
+          }
+        },
+        {
+          id: Number((Math.random() * 10).toFixed(3)) * 1000,
+          classify: '阅读',
+          title: '这里是一个标题',
+          author: '作者XXX',
+          imgSrc: 'http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/185217/1526554337758.jpg',
+          brief: '这里是文章简介',
+          date: '2019-10-14 11:59:11',
+          icon: {
+            favor: true,
+            share: true
+          }
+        },
+        {
+          id: Number((Math.random() * 10).toFixed(3)) * 1000,
+          classify: '音乐',
+          title: '这里是一个标题',
+          author: '作者XXX',
+          imgSrc: 'http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/185217/1526554337758.jpg',
+          brief: '这里是文章简介',
+          date: '2019-10-14 11:59:11',
+          icon: {
+            favor: true,
+            share: false
+          }
+        }
+      ]
+      this.setData({
+        featureList: newList
+      })
+      this.setData({
+        loaded: false
+      })
+      wx.stopPullDownRefresh()
+    }, 1000)
+  },
+  onReachBottom: function () {
+    let newList = [
+      {
+        id: Number((Math.random() * 10).toFixed(3)) * 1000,
+        classify: '阅读',
+        title: '这里是asjdflajdfl;标题',
+        author: '作者ssj',
+        imgSrc: 'http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/18512/1526554262156.jpg',
+        brief: '这里是另外一个文件的简介',
+        date: '2019-10-10 10:19:21',
+        icon: {
+          favor: false,
+          share: true
+        }
+      },
+      {
+        id: Number((Math.random() * 10).toFixed(3)) * 1000,
+        classify: '视频',
+        title: '这里是一个标题',
+        author: '作者XXX',
+        imgSrc: 'http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/185217/1526554337758.jpg',
+        brief: '这里是文章简介',
+        date: '2019-10-14 11:59:11',
+        icon: {
+          favor: true,
+          share: true
+        }
+      },
+      {
+        id: Number((Math.random() * 10).toFixed(3)) * 1000,
+        classify: '音乐',
+        title: '这里是一个标题',
+        author: '作者XXX',
+        imgSrc: 'http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/185217/1526554337758.jpg',
+        brief: '这里是文章简介',
+        date: '2019-10-14 11:59:11',
+        icon: {
+          favor: true,
+          share: false
+        }
+      },
+      {
+        id: Number((Math.random() * 10).toFixed(3)) * 1000,
+        classify: '音乐',
+        title: '这里是一个标题',
+        author: '作者XXX',
+        imgSrc: 'http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/185217/1526554337758.jpg',
+        brief: '这里是文章简介',
+        date: '2019-10-14 11:59:11',
+        icon: {
+          favor: true,
+          share: false
+        }
+      }
+    ]
+    let featureList = [].concat(this.data.featureList, newList)
+    setTimeout(() => {
+      if (featureList.length > 20) {
+        this.setData({loaded: true})
+      } else {
+        this.setData({featureList: featureList})
+      }
+    }, 360)
+    console.log('页面滑动到底部了')
+  },
+  onShareAppMessage() {
+
+  },
+  onPageScroll() {
+
+  },
+  onResize() {
+
   },
   getUserInfo: function (e) {
     console.log(e)

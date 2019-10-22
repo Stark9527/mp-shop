@@ -1,5 +1,0 @@
-body {
-  font-size: 11rpx;
-  background: red;
-  border: 10px solid red;
-  width: 100rpx; }

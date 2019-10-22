@@ -1,0 +1,17 @@
+.video-player-box {
+  font-size: 0;
+  > .video-player {
+    width: 100%;
+    height: 358rpx;
+
+    //> .controls {
+    //  border: 1px solid red;
+    //  display: block;
+    //  height: 400rpx;
+    //
+    //  > .cover {
+    //    height: 400rpx;
+    //  }
+    //}
+  }
+}

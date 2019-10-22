@@ -1,0 +1,17 @@
+<!--<videoPlayer></videoPlayer>-->
+<audioPlayer bindplayAudioTrigger="bindplayAudioTrigger"></audioPlayer>
+<toolBox wx:if="{{!showArea}}"
+         bindshowCommentBoxTrigger="bindshowCommentBoxTrigger"
+         needComment
+         needDate="{{false}}"
+         needFunction="{{true}}">
+  <!--<view slot="after-left" class="discover">-->
+    <!--<text class="iconfont iconfavor"></text>-->
+    <!--<text>发现</text>-->
+  <!--</view>-->
+</toolBox>
+<commentBox wx:if="{{showArea}}"
+            oldComment="{{comment}}"
+            bindcancelCommentTrigger="bindcancelCommentTrigger"
+            bindsubmitCommentTrigger="bindsubmitCommentTrigger"
+></commentBox>

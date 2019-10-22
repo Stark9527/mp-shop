@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "videoPlayer": "../../components/videoPlayer/videoPlayer",
+    "audioPlayer": "../../components/audioPlayer/audioPlayer",
+    "toolBox": "../../components/toolBox/toolBox",
+    "commentBox": "../../components/commentBox/commentBox"
+  }
+}

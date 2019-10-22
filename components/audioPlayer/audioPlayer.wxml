@@ -1,0 +1,15 @@
+<view class="audio-player-box">
+  <view class="blur" style="background-image: url('{{audioCover}}')"></view>
+  <view class="audio-player {{audioLoading ? 'loading' : ''}}">
+    <image class="cover {{audioPlay ? 'play' : ''}}"
+           src="{{audioCover}}"
+           mode="aspectFill"
+    ></image>
+    <view class="loading-dot"></view>
+    <text class="iconfont {{switchOn ? 'iconplay' : 'iconpause'}}"
+          data-switch="{{switchOn ? 'play' : 'pause'}}"
+          bindtap="bindAudioSwitchTap"
+    ></text>
+    <text class="audio-info">{{audioName}}·{{audioAuthor}}</text>
+  </view>
+</view>

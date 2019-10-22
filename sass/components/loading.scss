@@ -1,0 +1,33 @@
+@import "../base/main";
+@import "../base/iconfont";
+
+.loading {
+  padding: 20rpx;
+  font-size: ftSize('main');
+  color: colors('lower');
+  @keyframes rotates {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  > .iconloading {
+    display: inline-block;
+    margin-right: 10rpx;
+    vertical-align: middle;
+    animation: rotates 1.2s linear infinite;
+  }
+
+  > .loading-text {
+    vertical-align: middle;
+  }
+}
+
+.no-more {
+  display: block;
+  padding: 20rpx;
+  font-size: ftSize('main');
+  color: colors('lower');
+}

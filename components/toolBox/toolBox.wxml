@@ -1,0 +1,23 @@
+<view class="tool-box {{stick ? 'stick' : ''}}" style="height: {{height}}rpx;background: {{background}};{{style}}">
+  <view class="tool-left">
+    <slot name="before-left"></slot>
+    <text wx:if="{{needDate}}" class="date">{{date}}</text>
+    <text wx:if="{{needComment}}" bindtap="bindCommentBtnTap" class="comment-btn">写一个评论...</text>
+    <slot name="after-left"></slot>
+  </view>
+  <view class="tool-right">
+    <slot name="before-right"></slot>
+    <view wx:for="{{functionList}}"
+          wx:key="index"
+          wx:if="{{needFunction}}"
+          class="function {{item.activate ? 'activate' : ''}}"
+          style="color: {{iconColor}}"
+          data-icon="{{item.className}}"
+          bindtap="bindIconTap"
+    >
+      <text class="iconfont {{item.className}}"></text>
+      <text wx:if="{{item.counted}}" class="count">{{item.count}}</text>
+    </view>
+    <slot name="after-right"></slot>
+  </view>
+</view>

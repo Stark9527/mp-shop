@@ -1,0 +1,5 @@
+.video-player-box {
+  font-size: 0; }
+  .video-player-box > .video-player {
+    width: 100%;
+    height: 358rpx; }
