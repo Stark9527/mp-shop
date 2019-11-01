@@ -1,0 +1,60 @@
+@import "../base/main";
+
+.auth-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+  > .mask {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .1);
+  }
+  > .auth-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    background: colors('white');
+    > .title {
+      display: block;
+      padding: 20rpx;
+      text-align: center;
+      font-size: ftSize('title');
+      color: colors('title');
+    }
+    > .content {
+      min-height: 100rpx;
+      padding: 0 20rpx 20rpx 20rpx;
+      text-align: center;
+      font-size: ftSize('main');
+      color: colors('main');
+    }
+    > .btn-wrap {
+      border-top: 1px solid colors('border');
+      color: colors('main');
+      font-size: 0;
+      > .cancel, .confirm {
+        display: inline-block;
+        border-radius: 0;
+        width: 50%;
+        height: 96rpx;
+        padding: 0;
+        font-size: ftSize('main');
+        line-height: 96rpx;
+        background: colors('white');
+      }
+      > .cancel::after, .confirm::after {
+        border: 0;
+      }
+      > .cancel {
+        border-right: 1px solid colors('border');
+      }
+    }
+  }
+}

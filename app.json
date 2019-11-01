@@ -9,7 +9,8 @@
     {
       "root": "pages/subpages",
       "pages": [
-        "detail/detail"
+        "detail/detail",
+        "uploader/uploader"
       ]
     }
   ],
@@ -45,5 +46,9 @@
     "navigationBarTitleText": "mp-shop",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-toast": "vant-weapp/toast",
+    "authModal": "./components/authModal/authModal"
+  }
 }

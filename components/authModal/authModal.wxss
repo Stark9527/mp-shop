@@ -1,0 +1,88 @@
+.ui-clear {
+  zoom: 1; }
+  .ui-clear:before, .ui-clear:after {
+    display: table;
+    content: " "; }
+  .ui-clear:after {
+    clear: both; }
+
+.ui-overflow-clip {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.ui-overflow-clip-two {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all; }
+
+.ui-fl {
+  float: left; }
+
+.ui-fr {
+  float: right; }
+
+.ui-tl {
+  text-align: left; }
+
+.ui-tr {
+  text-align: right; }
+
+.ui-tc {
+  text-align: center; }
+
+.ui-tj {
+  text-align: justify; }
+
+.auth-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999; }
+  .auth-modal-container > .mask {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1); }
+  .auth-modal-container > .auth-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 500rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    background: #ffffff; }
+    .auth-modal-container > .auth-modal > .title {
+      display: block;
+      padding: 20rpx;
+      text-align: center;
+      font-size: 36rpx;
+      color: #303133; }
+    .auth-modal-container > .auth-modal > .content {
+      min-height: 100rpx;
+      padding: 0 20rpx 20rpx 20rpx;
+      text-align: center;
+      font-size: 28rpx;
+      color: #606266; }
+    .auth-modal-container > .auth-modal > .btn-wrap {
+      border-top: 1px solid #e2e2e2;
+      color: #606266;
+      font-size: 0; }
+      .auth-modal-container > .auth-modal > .btn-wrap > .cancel, .auth-modal-container > .auth-modal > .btn-wrap .confirm {
+        display: inline-block;
+        border-radius: 0;
+        width: 50%;
+        height: 96rpx;
+        padding: 0;
+        font-size: 28rpx;
+        line-height: 96rpx;
+        background: #ffffff; }
+      .auth-modal-container > .auth-modal > .btn-wrap > .cancel::after, .auth-modal-container > .auth-modal > .btn-wrap .confirm::after {
+        border: 0; }
+      .auth-modal-container > .auth-modal > .btn-wrap > .cancel {
+        border-right: 1px solid #e2e2e2; }

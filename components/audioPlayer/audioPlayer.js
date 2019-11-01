@@ -129,5 +129,16 @@ Component({
       this.destroy()
     }
   },
+  pageLifetimes:  { // 组件所在页面的生命周期
+    show() {
+
+    },
+    hide() {
+
+    },
+    resize() {
+
+    }
+  },
   options: {}
 })

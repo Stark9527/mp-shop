@@ -7,6 +7,7 @@
          controls="{{true}}"
          object-fit="contain"
          enable-play-gesture="{{true}}"
+         vslide-gesture-in-fullscreen="{{false}}"
          bindplay="bindplay"
          bindpause="bindpause"
          bindended="bindended"

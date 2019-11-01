@@ -9,11 +9,15 @@
   width: 100%;
   height: 96rpx;
   padding: 0 30rpx;
+  transition: all .3s;
   &.stick {
     position: fixed;
     bottom: 0;
     left: 0;
     border-top: 2rpx solid colors('border');
+  }
+  &.stick.toolBoxHide {
+    bottom: -126rpx;
   }
   > .tool-left {
     font-size: ftSize('main');

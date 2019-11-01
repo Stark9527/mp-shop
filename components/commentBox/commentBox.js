@@ -1,3 +1,4 @@
+const _ajax = require('../../utils/request')
 Component({
   properties: {
     countLimit: {
@@ -62,7 +63,24 @@ Component({
 
     },
     bindSubmitTap() {
-      this.triggerEvent('submitCommentTrigger')
+      console.log(11111111111111111111111111111111111)
+      if (!this.data.comment) {
+        wx.showToast({
+          icon: 'none',
+          title: '你还没有输入内容'
+        })
+        return false
+      }
+      _ajax('/mackTokenExpire').then(res => {
+        console.log(res)
+        if (res.data.status === 5) {
+          this.triggerEvent('submitCommentTrigger', {comment: this.data.comment})
+        } else {
+          this.triggerEvent('submitCommentTrigger')
+        }
+      }).catch(err => {
+        console.log(err)
+      })
     }
   },
   lifetimes: {
@@ -86,6 +104,17 @@ Component({
 
     },
     detached() {
+
+    }
+  },
+  pageLifetimes:  { // 组件所在页面的生命周期
+    show() {
+
+    },
+    hide() {
+
+    },
+    resize() {
 
     }
   },

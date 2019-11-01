@@ -3,6 +3,8 @@
     "videoPlayer": "../../components/videoPlayer/videoPlayer",
     "audioPlayer": "../../components/audioPlayer/audioPlayer",
     "toolBox": "../../components/toolBox/toolBox",
-    "commentBox": "../../components/commentBox/commentBox"
-  }
+    "commentBox": "../../components/commentBox/commentBox",
+    "loading": "../../components/loading/loading"
+  },
+  "navigationBarTitleText": "详情"
 }

@@ -47,14 +47,14 @@ Component({
         {className: 'iconfavor', count: 110, activate: false, hasActivateStatus: true, counted: true},
         {className: 'iconshare', count: 0, activate: false, hasActivateStatus: false, counted: false}
       ]
+    },
+    toolBoxHide: {
+      type: Boolean,
+      value: false
     }
   },
-  data: {
-
-  },
-  observers: {
-
-  },
+  data: {},
+  observers: {},
   methods: {
     bindIconTap(option) {
       console.log(option.currentTarget.dataset.icon)
@@ -92,6 +92,17 @@ Component({
 
     },
     detached() {
+
+    }
+  },
+  pageLifetimes: { // 组件所在页面的生命周期
+    show() {
+
+    },
+    hide() {
+
+    },
+    resize() {
 
     }
   },

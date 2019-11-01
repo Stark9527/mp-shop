@@ -37,5 +37,13 @@ Page({
   },
   onResize() {
 
+  },
+  bindToListPageTap(e) {
+    console.log(e)
+    console.log(e.currentTarget.dataset.classify)
+    wx.showToast({
+      icon: 'none',
+      title: '敬请期待'
+    })
   }
 })

@@ -1,4 +1,5 @@
 <view class="feature-list">
-  <listItem list="{{featureList}}" needClassify="true" data-color="red"></listItem>
-  <loading loaded="{{loaded}}" loading-text="没有更多了"></loading>
+  <listItem binditemTapTrigger="binditemTapTrigger" list="{{featureList}}" needClassify="true" data-color="red"></listItem>
+  <loading loaded="{{loaded}}"></loading>
+  <authModal wx:if="{{authModalShow}}" titleText="授权登录" content="授权登录可体验更多功能" bindgetUserInfoTrigger="bindgetUserInfoTrigger"></authModal>
 </view>

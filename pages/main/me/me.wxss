@@ -1,0 +1,85 @@
+.ui-clear {
+  zoom: 1; }
+  .ui-clear:before, .ui-clear:after {
+    display: table;
+    content: " "; }
+  .ui-clear:after {
+    clear: both; }
+
+.ui-overflow-clip {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.ui-overflow-clip-two {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all; }
+
+.ui-fl {
+  float: left; }
+
+.ui-fr {
+  float: right; }
+
+.ui-tl {
+  text-align: left; }
+
+.ui-tr {
+  text-align: right; }
+
+.ui-tc {
+  text-align: center; }
+
+.ui-tj {
+  text-align: justify; }
+
+page {
+  background-color: #e2e2e2; }
+
+.me-container > .login-wrap {
+  display: table;
+  vertical-align: middle;
+  width: 100%;
+  height: 200rpx;
+  padding-bottom: 16rpx;
+  text-align: center;
+  background: #ffffff;
+  font-size: 0; }
+  .me-container > .login-wrap > .avatar {
+    display: block;
+    margin: 16rpx auto;
+    width: 200rpx;
+    height: 200rpx; }
+  .me-container > .login-wrap > .login {
+    display: inline-block;
+    border: 2px solid #e2e2e2;
+    border-radius: 100rpx;
+    width: 200rpx;
+    padding: 16rpx 0;
+    font-size: 28rpx;
+    background: #C0C4CC;
+    color: #ffffff;
+    line-height: normal; }
+  .me-container > .login-wrap > .nickName {
+    font-size: 28rpx; }
+.me-container > .functions {
+  padding: 0 10rpx;
+  font-size: 28rpx;
+  color: #606266; }
+  .me-container > .functions > .fn {
+    display: table;
+    margin-top: 14rpx;
+    width: 100%;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 30rpx 28rpx;
+    background: #ffffff; }
+    .me-container > .functions > .fn > .fn-name {
+      display: table-cell; }
+    .me-container > .functions > .fn > .iconfont {
+      display: table-cell;
+      text-align: right; }

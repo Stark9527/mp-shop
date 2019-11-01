@@ -8,6 +8,10 @@ Component({
       type: String,
       value: '加载中....'
     },
+    loading: {
+      type: Boolean,
+      value: true
+    },
     noMoreText: {
       type: String,
       value: '- 没有更多了 -'
@@ -36,6 +40,17 @@ Component({
 
     },
     detached() {
+
+    }
+  },
+  pageLifetimes:  { // 组件所在页面的生命周期
+    show() {
+
+    },
+    hide() {
+
+    },
+    resize() {
 
     }
   },

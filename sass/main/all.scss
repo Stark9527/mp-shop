@@ -1,3 +1,27 @@
-div {
-  font-size: 20px;
+@import "../base/main";
+
+.all-wrap {
+  .swiper {
+    height: 300rpx;
+    .swiper-item {
+      .item-image {
+        display: block;
+        width: 100%;
+        height: 300rpx;
+      }
+    }
+  }
+  > .grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60rpx;
+    > .item {
+      border: 2rpx solid colors('border');
+      width: 180rpx;
+      height: 180rpx;
+      line-height: 180rpx;
+      text-align: center;
+    }
+  }
 }

@@ -31,5 +31,8 @@ Page({
   },
   onResize() {
 
+  },
+  onGotUserInfo(e) {
+    console.log(e)
   }
 })

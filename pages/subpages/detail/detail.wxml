@@ -1,17 +1,28 @@
-<!--<videoPlayer></videoPlayer>-->
-<audioPlayer bindplayAudioTrigger="bindplayAudioTrigger"></audioPlayer>
-<toolBox wx:if="{{!showArea}}"
-         bindshowCommentBoxTrigger="bindshowCommentBoxTrigger"
-         needComment
-         needDate="{{false}}"
-         needFunction="{{true}}">
-  <!--<view slot="after-left" class="discover">-->
-    <!--<text class="iconfont iconfavor"></text>-->
-    <!--<text>发现</text>-->
-  <!--</view>-->
-</toolBox>
-<commentBox wx:if="{{showArea}}"
-            oldComment="{{comment}}"
-            bindcancelCommentTrigger="bindcancelCommentTrigger"
-            bindsubmitCommentTrigger="bindsubmitCommentTrigger"
-></commentBox>
+<view style="padding-bottom: 96rpx;">
+  <videoPlayer wx:if="{{classify === '视频'}}"></videoPlayer>
+  <audioPlayer wx:if="{{classify === '音乐'}}"></audioPlayer>
+  <toolBox wx:if="{{!showArea}}"
+           needComment
+           toolBoxHide="{{toolBoxHide}}"
+           needDate="{{false}}"
+           needFunction="{{true}}"
+           bindshowCommentBoxTrigger="bindshowCommentBoxTrigger">
+  </toolBox>
+  <commentBox wx:if="{{showArea}}"
+              oldComment="{{comment}}"
+              bindcancelCommentTrigger="bindcancelCommentTrigger"
+              bindsubmitCommentTrigger="bindsubmitCommentTrigger"
+  ></commentBox>
+  <view class="header">
+    <text class="title">{{title}}</text>
+    <view class="author-wrap ui-clear">
+      <text class="author">文/{{author}}</text>
+      <text class="iconfont iconfavor"></text>
+    </view>
+  </view>
+  <view class="rich-text-wrap">
+    <loading loading="{{loading}}"></loading>
+    <rich-text nodes="{{strNodes}}"></rich-text>
+  </view>
+  <authModal wx:if="{{authModalShow}}" titleText="授权登录" content="授权登录可体验更多功能" bindgetUserInfoTrigger="bindgetUserInfoTrigger"></authModal>
+</view>

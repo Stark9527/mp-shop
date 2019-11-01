@@ -1,0 +1,21 @@
+<view class="uploader-warp">
+  <textarea
+    value="{{remark}}"
+    class="remark"
+    name="remark"
+    placeholder="{{placeholder}}"
+    maxlength="{{countLimit}}"
+    show-confirm-bar="{{false}}"
+    adjust-position="{{false}}"
+    bindfocus="bindfocus"
+    bindblur="bindblur"
+    bindinput="bindinput"
+    bindconfirm="bindconfirm"
+    placeholder-style="{{placeholderStyle}}"
+  ></textarea>
+  <view class="uploader-box">
+    <view class="uploader" bindtap="bindChooseFileTap"></view>
+    <image wx:if="{{previewUrl}}" mode="aspectFill" src="{{previewUrl}}" class="preview"></image>
+  </view>
+  <view class="uploader-btn {{activate}}" bindtap="bindUploadTap">上传</view>
+</view>

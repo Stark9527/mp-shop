@@ -1,4 +1,4 @@
-<view class="tool-box {{stick ? 'stick' : ''}}" style="height: {{height}}rpx;background: {{background}};{{style}}">
+<view class="tool-box {{stick ? 'stick' : ''}} {{toolBoxHide ? 'toolBoxHide' : ''}}" style="height: {{height}}rpx;background: {{background}};{{style}}">
   <view class="tool-left">
     <slot name="before-left"></slot>
     <text wx:if="{{needDate}}" class="date">{{date}}</text>

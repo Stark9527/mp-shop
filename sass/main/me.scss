@@ -1,0 +1,57 @@
+@import "../base/main";
+page {
+  background-color: colors('border');
+}
+.me-container {
+  > .login-wrap {
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+    height: 200rpx;
+    padding-bottom: 16rpx;
+    text-align: center;
+    background: colors('white');
+    font-size: 0;
+    > .avatar {
+      display: block;
+      margin: 16rpx auto;
+      width: 200rpx;
+      height: 200rpx;
+    }
+    > .login {
+      display: inline-block;
+      border: 2px solid colors('border');
+      border-radius: 100rpx;
+      width: 200rpx;
+      padding: 16rpx 0;
+      font-size: ftSize('main');
+      background: colors('lower');
+      color: colors('white');
+      line-height: normal;
+    }
+    > .nickName {
+      font-size: ftSize('main');
+    }
+  }
+  > .functions {
+    padding: 0 10rpx;
+    font-size: ftSize('main');
+    color: colors('main');
+    > .fn {
+      display: table;
+      margin-top: 14rpx;
+      width: 100%;
+      vertical-align: middle;
+      box-sizing: border-box;
+      padding: 30rpx 28rpx;
+      background: colors('white');
+      > .fn-name {
+        display: table-cell;
+      }
+      > .iconfont {
+        display: table-cell;
+        text-align: right;
+      }
+    }
+  }
+}

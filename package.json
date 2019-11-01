@@ -1,0 +1,22 @@
+{
+  "name": "mp-shop",
+  "version": "0.0.1",
+  "description": "mp-demo",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stark9527/mp-shop.git"
+  },
+  "author": "Stark9527",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stark9527/mp-shop/issues"
+  },
+  "homepage": "https://github.com/Stark9527/mp-shop#readme",
+  "dependencies": {
+    "vant-weapp": "^0.5.22"
+  }
+}

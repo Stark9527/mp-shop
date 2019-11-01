@@ -1,0 +1,12 @@
+<view wx:if="{{show}}" class="auth-modal-container" catchtouchmove>
+  <view class="mask"></view>
+  <view class="auth-modal">
+    <text wx:if="{{title}}" class="title">{{titleText}}</text>
+    <view wx:if="{{!custom}}" class="content">{{content}}</view>
+    <slot></slot>
+    <view class="btn-wrap">
+      <button class="cancel" bindtap="cancel">{{cancelBtnText}}</button>
+      <button class="confirm" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">{{confirmBtnText}}</button>
+    </view>
+  </view>
+</view>

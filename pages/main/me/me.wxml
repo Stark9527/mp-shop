@@ -1,0 +1,14 @@
+<view class="me-container">
+  <view class="login-wrap">
+    <image class="avatar" src="{{avatar ? avatar : '/images/logout.png'}}" mode="aspectFill"></image>
+    <button wx:if="{{!nickName}}" class="login" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">登录</button>
+    <text wx:if="{{nickName}}" class="nickName">{{nickName}}</text>
+  </view>
+  <view class="functions">
+    <view wx:for="{{functions}}" wx:key="index" class="fn" data-classify="{{item.classify}}" bindtap="bindFuncTap">
+      <text class="fn-name">{{item.name}}</text>
+      <text class="iconfont {{item.icon}}"></text>
+    </view>
+  </view>
+  <authModal wx:if="{{authModalShow}}" titleText="授权登录" content="授权登录可体验更多功能" bindgetUserInfoTrigger="bindgetUserInfoTrigger"></authModal>
+</view>

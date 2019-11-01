@@ -1,4 +1,4 @@
-<view class="item" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="id" data-index="index" bindtap="bindItemTap">
+<view class="item" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="item.id" data-index="{{index}}" data-data="{{item}}" bindtap="bindItemTap">
   <text wx:if="{{needClassify}}" class="classify">- {{item.classify}} -</text>
   <text class="title">{{item.title}}</text>
   <text class="author">{{item.author}}</text>
@@ -13,7 +13,7 @@
   <text class="brief">{{item.brief}}</text>
   <text class="date">{{item.date}}</text>
   <view class="tool-box">
-    <text wx:if="{{item.icon.favor}}" class="iconfont iconall favor"></text>
-    <text wx:if="{{item.icon.share}}" class="iconfont iconfavor share"></text>
+    <text wx:if="{{item.icon.favor}}" class="iconfont iconall favor" catchtap="bindFavorTap"></text>
+    <text wx:if="{{item.icon.share}}" class="iconfont iconfavor share" catchtap="bindShareTap"></text>
   </view>
 </view>

@@ -11,3 +11,32 @@
     //vertical-align: middle;
   }
 }
+
+.header {
+  padding: 40rpx 30rpx 50rpx 30rpx;
+
+  > .title {
+    font-size: ftSize('large');
+    font-weight: bold;
+    color: ftSize('title');
+  }
+  > .author-wrap {
+    display: table;
+    vertical-align: middle;
+    margin-top: 40rpx;
+    width: 100%;
+    > .author {
+      display: table-cell;
+      font-size: ftSize('main');
+      color: colors('main');
+    }
+    > .iconfont {
+      display: table-cell;
+      text-align: right;
+      color: colors('main');
+    }
+  }
+}
+.rich-text-wrap {
+  padding: 0 20rpx;
+}

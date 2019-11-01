@@ -1,0 +1,15 @@
+<view class="all-wrap">
+  <swiper class="swiper" autoplay="{{true}}" indicator-dots="{{true}}" indicator-color="rgba(255, 255, 255, .8)">
+    <swiper-item class="swiper-item">
+      <image class="item-image" mode="aspectFill" src="http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/185217/1526554337758.jpg"></image>
+    </swiper-item>
+    <swiper-item class="swiper-item">
+      <image class="item-image" mode="aspectFill" src="http://cczbfile.ccvzb.com//gcrcsUploadFile/2018/5/17/18512/1526554262156.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <view class="grid">
+    <view class="item" data-classify="image" bindtap="bindToListPageTap">图文</view>
+    <view class="item" data-classify="audio" bindtap="bindToListPageTap">音乐</view>
+    <view class="item" data-classify="video" bindtap="bindToListPageTap">视频</view>
+  </view>
+</view>
